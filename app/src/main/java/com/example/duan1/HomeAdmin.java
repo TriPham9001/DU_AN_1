@@ -113,6 +113,7 @@ public class HomeAdmin extends AppCompatActivity {
                 recyclerViewDrink.setHasFixedSize(true);
                 recyclerViewDrink.setAdapter(menuItemsDrinkAdapter);
                 menuItemsDrinkAdapter.notifyDataSetChanged();
+                //Show List Size
                 Toast.makeText(HomeAdmin.this, ""+list.size(), Toast.LENGTH_SHORT).show();
             }
 
