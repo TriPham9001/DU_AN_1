@@ -14,16 +14,6 @@
         android:gravity="top|center"
         android:orientation="vertical">
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:fontFamily="cursive"
-            android:text="KING FOOD"
-            android:textAlignment="center"
-            android:textColor="#82D7FA"
-            android:textSize="30sp"
-            android:textStyle="bold" />
-
         <ImageView
             android:id="@+id/background"
             android:layout_width="290dp"
@@ -106,7 +96,7 @@
             android:layout_marginLeft="5dp"
             android:layout_weight="1"
             android:background="@drawable/button_background"
-            android:text="SignIn"
+            android:text="SignI-UP"
             android:textColor="@color/black" />
 
     </LinearLayout>

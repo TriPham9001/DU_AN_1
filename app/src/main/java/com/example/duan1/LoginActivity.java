@@ -45,7 +45,8 @@ public class LoginActivity extends AppCompatActivity {
         btnRegister.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Signin();
+                Intent i = new Intent(LoginActivity.this, SignUpActivity.class);
+                startActivity(i);
             }
         });
         btnLogin.setOnClickListener(new View.OnClickListener() {
@@ -55,23 +56,7 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
     }
-    public void Signin(){
-        firebaseAuth = FirebaseAuth.getInstance();
-        username = edtUsername.getText().toString();
-        password = textInputLayout.getEditText().getText().toString();
-        
-        firebaseAuth.createUserWithEmailAndPassword(username, password).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
-                    @Override
-                    public void onComplete(@NonNull Task<AuthResult> task) {
-                        if (task.isSuccessful()) {
-                            FirebaseUser user = firebaseAuth.getCurrentUser();
-                            Toast.makeText(LoginActivity.this, "Sign-in Succesfully", Toast.LENGTH_SHORT).show();
-                        } else {
-                            edtUsername.setError("Sign-In Failed");
-                        }
-                }
-        });
-    }
+
     public void Login(){
         firebaseAuth = FirebaseAuth.getInstance();
         username = edtUsername.getText().toString();
