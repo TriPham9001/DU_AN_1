@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:id="@+id/top"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_50"
+        android:background="@drawable/nav_oder_top">
+        <ImageView
+            android:id="@+id/img_back_oder"
+            android:layout_width="@dimen/dp_50"
+            android:layout_height="@dimen/dp_50"
+            android:src="@drawable/ic_back"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_margin="@dimen/dp_10"/>
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_125"
+        android:layout_above="@+id/nav_oder_bottom"
+        android:layout_below="@+id/top"
+        android:layout_marginTop="-2dp"
+        android:layout_marginBottom="2dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/dp_5">
+
+            <RelativeLayout
+                android:id="@+id/opening"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white">
+
+                <TextView
+                    android:layout_width="@dimen/dp_200"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="15dp"
+                    android:fontFamily="sans-serif-black"
+                    android:text="Đơn hàng của bạn"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp_20" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_add_oder"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentRight="true"
+                    android:backgroundTint="#FFFFFF"
+                    android:layout_marginTop="@dimen/dp_5"
+                    android:layout_marginRight="@dimen/dp_5"
+                    android:background="@drawable/border"
+                    android:fontFamily="sans-serif-black"
+                    android:text="Thêm món"
+                    android:textColor="@color/black" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="@dimen/dp_60" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/body"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_80"
+                android:layout_below="@+id/opening"
+                android:layout_marginTop="@dimen/dp_10"
+                android:background="@color/white">
+
+                <RelativeLayout
+                    android:layout_width="380dp"
+                    android:layout_height="@dimen/dp_60"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/bg_rela_oder">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginTop="16dp"
+                        android:fontFamily="sans-serif-black"
+                        android:text="@string/seal_food"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/sp_20" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btn_change_sale"
+                        android:layout_width="@dimen/dp_100"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginTop="7dp"
+                        android:layout_marginRight="5dp"
+                        android:background="@drawable/bg_btn_change_sake"
+                        android:fontFamily="sans-serif-black"
+                        android:text="@string/change_sale"
+                        android:textColor="@color/white" />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/body"
+                android:background="@color/white"
+                android:layout_marginTop="@dimen/dp_10">
+
+                <TextView
+                    android:layout_width="@dimen/dp_200"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="15dp"
+                    android:fontFamily="sans-serif-black"
+                    android:text="Chi tiết thanh toán"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp_20" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_details_oder"
+                    android:layout_width="@dimen/dp_100"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="@dimen/dp_5"
+                    android:backgroundTint="#FFFFFF"
+                    android:layout_marginRight="@dimen/dp_5"
+                    android:background="@drawable/border"
+                    android:fontFamily="sans-serif-black"
+                    android:text="Xem Chi Tiết"
+                    android:textColor="@color/black" />
+
+                <RelativeLayout
+                    android:layout_width="@dimen/dp_350"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="65dp"
+                    android:layout_marginBottom="@dimen/dp_20"
+                    android:layout_marginRight="30dp"
+                    android:background="@drawable/border_end_oder">
+
+                    <TextView
+                        android:id="@+id/gia_mon_an"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Giá món ăn"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginTop="@dimen/dp_10"
+                        android:layout_marginLeft="@dimen/dp_10"
+                        android:textSize="@dimen/sp_20"/>
+                    <TextView
+                        android:id="@+id/tien_mon_an"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="150.000"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginTop="@dimen/dp_10"
+                        android:layout_marginRight="@dimen/dp_10"
+                        android:textSize="@dimen/sp_20"/>
+
+                    <ImageView
+                        android:id="@+id/imageView1"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_5"
+                        android:layout_alignParentLeft="true"
+                        android:layout_below="@+id/tien_mon_an"
+                        android:layout_marginTop="@dimen/dp_5"
+                        android:layerType="software"
+                        android:src="@drawable/line" />
+
+                    <TextView
+                        android:id="@+id/phi_giao_hang"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_below="@+id/imageView1"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="@dimen/dp_5"
+                        android:text="Phí Giao Hàng"
+                        android:textSize="@dimen/sp_20" />
+
+                    <TextView
+                        android:id="@+id/tien_ship"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_below="@+id/imageView1"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="@dimen/dp_5"
+                        android:text="14.000"
+                        android:textSize="@dimen/sp_20" />
+
+                    <ImageView
+                        android:id="@+id/imageView2"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_5"
+                        android:layout_marginTop="@dimen/dp_5"
+                        android:layout_alignParentLeft="true"
+                        android:layout_below="@id/tien_ship"
+                        android:layerType="software"
+                        android:src="@drawable/line" />
+
+                    <TextView
+                        android:id="@+id/phi_nen_tang"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_below="@+id/imageView2"
+                        android:layout_marginLeft="@dimen/dp_10"
+                        android:layout_marginTop="@dimen/dp_5"
+                        android:text="Phí Nền Tảng"
+                        android:textSize="@dimen/sp_20" />
+
+                    <TextView
+                        android:id="@+id/tien_nen_tang"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/imageView2"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginTop="@dimen/dp_5"
+                        android:layout_marginRight="@dimen/dp_10"
+                        android:text="1.000"
+                        android:textSize="@dimen/sp_20" />
+                    <ImageView
+                        android:id="@+id/imageView4"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_5"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginTop="@dimen/dp_5"
+                        android:layout_below="@+id/tien_nen_tang"
+                        android:layerType="software"
+                        android:src="@drawable/line" />
+
+                    <TextView
+                        android:id="@+id/giam_gia"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_below="@+id/imageView4"
+                        android:layout_marginLeft="@dimen/dp_10"
+                        android:layout_marginTop="@dimen/dp_5"
+                        android:text="Giảm Giá"
+                        android:textSize="@dimen/sp_20" />
+
+                    <TextView
+                        android:id="@+id/tien_giam_gia"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/imageView4"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginTop="@dimen/dp_5"
+                        android:layout_marginRight="@dimen/dp_10"
+                        android:text="-15.000"
+                        android:textSize="@dimen/sp_20" />
+                    <ImageView
+                        android:id="@+id/imageView5"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_5"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginTop="@dimen/dp_5"
+                        android:layout_below="@+id/giam_gia"
+                        android:layerType="software"
+                        android:src="@drawable/line_end" />
+
+                    <TextView
+                        android:id="@+id/tong_thanh_toan"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_below="@+id/imageView5"
+                        android:layout_marginLeft="@dimen/dp_10"
+                        android:layout_marginTop="@dimen/dp_15"
+                        android:text="Tổng Thanh Toán"
+                        android:layout_marginBottom="@dimen/dp_20"
+                        android:textSize="@dimen/sp_20" />
+
+                    <TextView
+                        android:id="@+id/tong_tien"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/imageView5"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginTop="@dimen/dp_15"
+                        android:layout_marginRight="@dimen/dp_10"
+                        android:text="@string/prince_oder"
+                        android:layout_marginBottom="@dimen/dp_20"
+                        android:textSize="@dimen/sp_20" />
+
+                </RelativeLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/nav_oder_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_130"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/nav_oder_bottom" >
+        <TextView
+            android:id="@+id/prince_oder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/prince_oder"
+            android:textColor="@color/black"
+            android:fontFamily="sans-serif-black"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_marginTop="@dimen/dp_10"
+            android:textSize="@dimen/dp_20"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp_30"
+            android:layout_gravity="left"
+            android:layout_marginLeft="@dimen/dp_100"
+            android:background="@drawable/bg_text"
+            android:scaleType="center"
+            android:textColor="#FFFFFF"
+            android:layout_marginTop="@dimen/dp_10"
+            android:fontFamily="sans-serif-black"
+            android:text="@string/tien_mat"
+            android:textSize="@dimen/dp_20" />
+
+        <Button
+            android:layout_width="@dimen/dp_300"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/oder"
+            android:layout_marginTop="@dimen/dp_50"
+            android:gravity="center"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/white"
+            android:fontFamily="sans-serif-black"
+            android:textSize="@dimen/dp_20"
+            android:background="@drawable/button_background"
+            />
+    </RelativeLayout>
+</RelativeLayout>

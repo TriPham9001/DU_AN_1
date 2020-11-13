@@ -27,4 +27,10 @@
     <string name="chb_remember_password">Nhớ mật khẩu</string>
     <string name="btn_registration">Đăng ký</string>
     <string name="btn_login">Đăng nhập</string>
+    <string name="com_ga">Cơm Gà</string>
+    <string name="seal_food">Khuyến mãi Giảm giá món ăn</string>
+    <string name="change_sale">THAY ĐỔI</string>
+    <string name="tien_mat">Tiền Mặt</string>
+    <string name="prince_oder">150.000</string>
+    <string name="oder">Oder</string>
 </resources>

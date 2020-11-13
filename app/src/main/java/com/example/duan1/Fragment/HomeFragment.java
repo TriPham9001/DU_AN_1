@@ -78,11 +78,9 @@ public class HomeFragment extends Fragment {
         mList.add(new Popular(R.drawable.humberger,"Humberger") );
         mList.add(new Popular(R.drawable.ic_banhxeo,"Bánh Xèo") );
         mList.add(new Popular(R.drawable.comga,"Cơm Gà") );
-        mList.add(new Popular(R.drawable.comchien, "Cơm chiên "));
         mList.add(new Popular(R.drawable.humberger,"Humberger") );
         mList.add(new Popular(R.drawable.ic_banhxeo,"Bánh Xèo") );
         mList.add(new Popular(R.drawable.comga,"Cơm Gà") );
-        mList.add(new Popular(R.drawable.comchien, "Cơm chiên"));
         mList.add(new Popular(R.drawable.humberger,"Humberger") );
         mList.add(new Popular(R.drawable.ic_banhxeo,"Bánh Xèo") );
 
@@ -90,10 +88,8 @@ public class HomeFragment extends Fragment {
         List.add(new Recommended(R.drawable.comga, "Cơm Gà"));
         List.add(new Recommended(R.drawable.humberger, "Humberger"));
         List.add(new Recommended(R.drawable.comga, "Cơm Gà"));
-        List.add(new Recommended(R.drawable.comchien, "Cơm chiên "));
         List.add(new Recommended(R.drawable.humberger, "Humberger"));
         List.add(new Recommended(R.drawable.comga, "Cơm Gà"));
         List.add(new Recommended(R.drawable.humberger, "Humberger"));
-        List.add(new Recommended(R.drawable.comchien, "Cơm chiên "));
     }
 }
