@@ -1,3 +1,2 @@
-"# LoveFood" 
-"# KingFood" 
+
 "# LoveFood" 
