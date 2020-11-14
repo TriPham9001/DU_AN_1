@@ -10,7 +10,7 @@ public class Customer {
         this.passWord = passWord;
         this.email = email;
     }
-
+    //Model
     public String getUserName() {
         return userName;
     }
