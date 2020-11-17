@@ -7,9 +7,9 @@
 
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/img_add_new_drink"
-        android:layout_width="174dp"
-        android:layout_height="@dimen/dp_100"
-        android:background="@drawable/button_background"/>
+        android:layout_width="175dp"
+        android:layout_height="150dp"
+        android:background="@drawable/ic_baseline_add_to_photos_24"/>
 
     <EditText
         android:id="@+id/id_fd"

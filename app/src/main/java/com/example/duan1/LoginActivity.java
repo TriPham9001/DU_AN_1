@@ -30,7 +30,6 @@ public class LoginActivity extends AppCompatActivity {
     String username,password;
     FirebaseAuth firebaseAuth;
     CheckBox checkBox;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -42,6 +41,7 @@ public class LoginActivity extends AppCompatActivity {
         textInputLayout = findViewById(R.id.pass);
         checkBox = findViewById(R.id.checkbox);
         LoadLogin();
+
         btnRegister.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -49,6 +49,7 @@ public class LoginActivity extends AppCompatActivity {
                 startActivity(i);
             }
         });
+
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -61,21 +62,28 @@ public class LoginActivity extends AppCompatActivity {
         firebaseAuth = FirebaseAuth.getInstance();
         username = edtUsername.getText().toString();
         password = textInputLayout.getEditText().getText().toString();
-        final boolean check = checkBox.isChecked();
-        firebaseAuth.signInWithEmailAndPassword(username,password).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
-            @Override
-            public void onComplete(@NonNull Task<AuthResult> task) {
-                if(task.isSuccessful()){
-                    FirebaseUser user = firebaseAuth.getCurrentUser();
-                    SaveUser(username,password,check);
-                    Intent i2 = new Intent(LoginActivity.this, HomeAdmin.class);
-                    startActivity(i2);
-                    Toast.makeText(LoginActivity.this, "Login Succesfully", Toast.LENGTH_SHORT).show();
-                }else{
-                    Toast.makeText(LoginActivity.this, "Login Failed", Toast.LENGTH_SHORT).show();
+        if(username.isEmpty() || password.isEmpty()){
+            edtUsername.setError("Don't Empty Email or Password");
+        }else{
+            edtUsername.setError(null);
+            final boolean check = checkBox.isChecked();
+            firebaseAuth.signInWithEmailAndPassword(username,password).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+                @Override
+                public void onComplete(@NonNull Task<AuthResult> task) {
+                    if(task.isSuccessful()){
+                        FirebaseUser user = firebaseAuth.getCurrentUser();
+                        SaveUser(username,password,check);
+                        Intent i2 = new Intent(LoginActivity.this, MainActivity.class);
+                        startActivity(i2);
+                        Toast.makeText(LoginActivity.this, "Login Succesfully", Toast.LENGTH_SHORT).show();
+                    }else{
+                        Toast.makeText(LoginActivity.this, "Login Failed", Toast.LENGTH_SHORT).show();
+                    }
                 }
-            }
-        });
+            });
+        }
+
+
     }
     private void SaveUser(String username, String password, boolean check){
         SharedPreferences preferences=getSharedPreferences("infoUser.dat",MODE_PRIVATE);
@@ -97,6 +105,7 @@ public class LoginActivity extends AppCompatActivity {
             checkBox.setChecked(check);
         }
     }
+
     @Override
     protected void onStart() {
         super.onStart();

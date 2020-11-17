@@ -15,17 +15,16 @@
 
     <ImageView
         android:id="@+id/imgViewCart"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
         android:layout_alignParentRight="true"
         android:src="@drawable/ic_cart" />
-<de.hdodenhof.circleimageview.CircleImageView
-    android:id="@+id/imgFoodImage"
-    android:layout_width="405dp"
-    android:layout_height="301dp"
-    android:layout_below="@id/imgViewBack"
-    android:src="@drawable/ic_comchienxaobo"/>
-
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/imgFoodImage"
+        android:layout_width="405dp"
+        android:layout_height="301dp"
+        android:layout_below="@id/imgViewBack"
+        android:src="@drawable/ic_comchienxaobo"/>
 
     <TextView
         android:id="@+id/tvFoodName"

@@ -1,11 +1,14 @@
 package com.example.duan1;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
+
+import com.example.duan1.Adapter.MenuItemsFoodAdapter;
 import com.example.duan1.Fragment.BillFragment;
 import com.example.duan1.Fragment.FavoriteFragment;
 import com.example.duan1.Fragment.HomeFragment;

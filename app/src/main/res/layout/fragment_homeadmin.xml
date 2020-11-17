@@ -5,64 +5,65 @@
     android:layout_height="match_parent"
     xmlns:android="http://schemas.android.com/apk/res/android" >
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
         tools:context=".MainActivity">
 
-        <TextView
-            android:id="@+id/textView"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
-            android:text="King Food"
-            android:textColor="#82D7FA"
-            android:fontFamily="cursive"
-            android:textSize="45sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:text="King Food"
+                android:textColor="#82D7FA"
+                android:fontFamily="cursive"
+                android:textSize="50sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-        <ImageView
-            android:id="@+id/img_add_food"
-            android:layout_width="45dp"
-            android:layout_height="50dp"
-            android:layout_alignParentTop="true"
-            android:layout_marginTop="20dp"
-            android:layout_marginEnd="50dp"
-            android:src="@drawable/ic_add"
-            app:layout_constraintEnd_toEndOf="@+id/imageView"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:ignore="MissingConstraints" />
+            <ImageView
+                android:id="@+id/img_add_food"
+                android:layout_width="52dp"
+                android:layout_height="56dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="25dp"
+                android:src="@drawable/ic_add"
+                tools:ignore="MissingConstraints" />
 
-        <ImageView
-            android:id="@+id/img_add_drink"
-            android:layout_width="45dp"
-            android:layout_height="50dp"
-            android:layout_alignParentTop="true"
-            android:layout_marginTop="20dp"
-            android:layout_marginRight="10dp"
-            android:layout_marginEnd="8dp"
-            android:layout_toStartOf="@+id/img_add_food"
-            android:src="@drawable/ic_add_drink"
-            app:layout_constraintEnd_toStartOf="@+id/img_add_food"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:ignore="MissingConstraints" />
+            <ImageView
+                android:id="@+id/img_add_drink"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="25dp"
+                android:layout_toStartOf="@+id/img_add_food"
+                android:src="@drawable/ic_add_drink"
+                app:layout_constraintEnd_toStartOf="@+id/img_add_food"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="MissingConstraints" />
 
-        <ImageView
-            android:id="@+id/imageView"
-            android:layout_width="45dp"
-            android:layout_height="50dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginEnd="16dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/ic_cart"
-            tools:ignore="VectorDrawableCompat" />
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="20dp"
+                app:srcCompat="@drawable/ic_cart"
+                android:layout_marginRight="10dp"
+                tools:ignore="VectorDrawableCompat" />
 
-        <androidx.appcompat.widget.SearchView
-            android:id="@+id/edtSearch"
-            android:layout_width="0dp"
+        </LinearLayout>
+        <EditText
+            android:id="@+id/editText"
+            android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_marginStart="16dp"
             android:layout_marginTop="24dp"
@@ -85,20 +86,20 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
             android:layout_marginTop="24dp"
-            android:text="All Drink in Restaurant"
+            android:text="Popular this Week"
             android:textColor="#333333"
             android:textSize="18sp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/edtSearch" />
+            app:layout_constraintTop_toBottomOf="@+id/editText" />
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/drink_recycler"
+            android:id="@+id/popular_recycler"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
             android:orientation="horizontal"
+            android:layout_marginTop="16dp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tv_name_popular" />
 
@@ -107,44 +108,49 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
-            android:layout_marginTop="24dp"
-            android:text="All Food in Restaurant"
+            android:layout_marginTop="20dp"
+            android:text="Recommened for You"
             android:textColor="#333333"
             android:textSize="18sp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/drink_recycler" />
+            app:layout_constraintTop_toBottomOf="@+id/popular_recycler" />
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/food_recycler"
-            android:layout_width="0dp"
+            android:id="@+id/recommended_recycler"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView3" />
+            android:layout_marginTop="20dp" />
 
         <TextView
             android:id="@+id/textView4"
+            android:layout_marginTop="20dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:text="All Drink in Restaurant"
             android:layout_marginStart="20dp"
-            android:layout_marginTop="24dp"
-            android:text="All Voucher"
             android:textColor="#333333"
-            android:textSize="18sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/food_recycler" />
+            android:textSize="18sp" />
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/all_menu_recycler"
-            android:layout_width="0dp"
-            android:layout_height="500dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginBottom="75dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView4"
-            app:layout_constraintVertical_bias="0.0" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
+            android:id="@+id/recycler_drink"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginTop="@dimen/dp_20" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="All Food in Restaurant"
+            android:textColor="#333333"
+            android:textSize="18sp"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_marginTop="20dp"
+            android:id="@+id/recycler_food"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="75dp"/>
+    </LinearLayout>
 </ScrollView>

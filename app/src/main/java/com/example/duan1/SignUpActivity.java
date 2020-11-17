@@ -55,19 +55,29 @@ public class SignUpActivity extends AppCompatActivity {
         String Email = edtEmail.getText().toString();
         String Password = edtPassword.getEditText().getText().toString();
         String rePassword = edtRePassword.getEditText().getText().toString();
-        if(Password.equals(rePassword)){
-            firebaseAuth.createUserWithEmailAndPassword(Email, Password).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
-                @Override
-                public void onComplete(@NonNull Task<AuthResult> task) {
-                    if (task.isSuccessful()) {
-                        FirebaseUser user = firebaseAuth.getCurrentUser();
-                        Toast.makeText(SignUpActivity.this, "Sign-Up Succesfully", Toast.LENGTH_SHORT).show();
-                    } else {
+        if(Email.isEmpty()){
+            edtEmail.setError("Don't Empty Email");
+        }else if(Password.isEmpty()){
+            edtPassword.setError("Don't Empty Password");
+        }else if(rePassword.equals(Password) == false){
+            edtRePassword.setError("Password And RePassword Doesn't Match");
+        }else{
+            if(Password.equals(rePassword)){
+                edtEmail.setError(null);
+                edtRePassword.setError(null);
+                edtPassword.setError(null);
+                firebaseAuth.createUserWithEmailAndPassword(Email, Password).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+                    @Override
+                    public void onComplete(@NonNull Task<AuthResult> task) {
+                        if (task.isSuccessful()) {
+                            FirebaseUser user = firebaseAuth.getCurrentUser();
+                            Toast.makeText(SignUpActivity.this, "Sign-Up Succesfully", Toast.LENGTH_SHORT).show();
+                        } else {
 
+                        }
                     }
-                }
-            });
+                });
+            }
         }
-
     }
 }

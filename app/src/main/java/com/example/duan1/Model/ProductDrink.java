@@ -8,12 +8,12 @@ public class ProductDrink {
     private String codeDrink;
     private Double priceDrink;
     private String describeDrink;
-    private byte[] imagesDrink;
+    private String imagesDrink;
 
     public ProductDrink() {
     }
 
-    public ProductDrink(String nameDrink, String codeDrink, Double priceDrink, String describeDrink, byte[] imagesDrink) {
+    public ProductDrink(String nameDrink, String codeDrink, Double priceDrink, String describeDrink, String imagesDrink) {
         this.nameDrink = nameDrink;
         this.codeDrink = codeDrink;
         this.priceDrink = priceDrink;
@@ -53,11 +53,11 @@ public class ProductDrink {
         this.describeDrink = describeDrink;
     }
 
-    public byte[] getImagesDrink() {
+    public String getImagesDrink() {
         return imagesDrink;
     }
 
-    public void setImagesDrink(byte[] imagesDrink) {
+    public void setImagesDrink(String imagesDrink) {
         this.imagesDrink = imagesDrink;
     }
 }

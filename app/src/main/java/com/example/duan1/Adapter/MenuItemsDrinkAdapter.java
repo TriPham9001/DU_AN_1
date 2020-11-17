@@ -1,6 +1,7 @@
 package com.example.duan1.Adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.view.LayoutInflater;
@@ -13,6 +14,9 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
+import com.example.duan1.DetailsDrinkOrFood;
+import com.example.duan1.Fragment.HomeFragment;
+import com.example.duan1.MainActivity;
 import com.example.duan1.Model.ProductDrink;
 import com.example.duan1.R;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
@@ -26,19 +30,36 @@ public class MenuItemsDrinkAdapter extends RecyclerView.Adapter<MenuItemsDrinkAd
 
     List<ProductDrink> list;
     Context context;
+    HomeFragment homeFragment;
 
-    public MenuItemsDrinkAdapter(List<ProductDrink>list, Context context) {
+    public MenuItemsDrinkAdapter(List<ProductDrink> list, Context context, HomeFragment homeFragment) {
+        this.list = list;
+        this.context = context;
+        this.homeFragment = homeFragment;
+    }
+
+    public MenuItemsDrinkAdapter(List<ProductDrink> list, Context context) {
         this.list = list;
         this.context = context;
     }
+
     @Override
-    public void onBindViewHolder(@NonNull MenuItemsViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull MenuItemsViewHolder holder, final int position) {
         final ProductDrink productDrink = list.get(position);
         if(list != null){
             holder.txtNameDrink.setText(productDrink.getNameDrink());
             holder.txtIDDrink.setText(productDrink.getCodeDrink()+"");
             holder.txtPrice.setText(productDrink.getPriceDrink()+" $");
             holder.txtDesbribe.setText(productDrink.getDescribeDrink());
+            Glide.with(context).load(list.get(position).getImagesDrink()).into(holder.imagesDrink);
+
+            holder.itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    homeFragment.Itent(position);
+                }
+            });
+
         }
     }
 
