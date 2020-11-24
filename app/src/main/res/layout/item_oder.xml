@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="150dp">
+    android:layout_height="@dimen/dp_150"
+    android:background="@drawable/nav_oder_top">
 
     <ImageView
         android:id="@+id/img_food_oder"
@@ -34,7 +33,7 @@
         android:layout_marginStart="19dp"
         android:layout_marginTop="55dp"
         android:layout_toEndOf="@+id/img_food_oder"
-        android:text="50.000đ"
+        android:text="@string/prince"
         android:textColor="@color/black"
         android:textSize="@dimen/sp_10"
          />
@@ -44,8 +43,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_alignParentRight="true"
-        android:layout_marginTop="20dp"
-        android:layout_marginRight="13dp"
+        android:layout_marginTop="@dimen/dp_20"
+        android:layout_marginRight="@dimen/dp_13"
         android:src="@drawable/ic_favorite_oder" />
 
     <RelativeLayout
@@ -53,8 +52,8 @@
         android:layout_height="@dimen/dp_30"
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginRight="35dp"
-        android:layout_marginBottom="11dp"
+        android:layout_marginRight="@dimen/dp_35"
+        android:layout_marginBottom="@dimen/dp_10"
         android:background="@drawable/add_revoke_oder">
 
         <androidx.appcompat.widget.AppCompatButton
@@ -67,17 +66,17 @@
             android:layout_marginEnd="@dimen/dp_10"
             android:background="@color/white"
             android:fontFamily="sans-serif-black"
-            android:text="+"
+            android:text="@string/them"
             android:textColor="@color/black"
-            android:textSize="10sp" />
+            android:textSize="@dimen/sp_10" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
-            android:layout_marginStart="15dp"
-            android:layout_marginEnd="17dp"
-            android:layout_marginBottom="6dp"
+            android:layout_marginStart="@dimen/dp_15"
+            android:layout_marginEnd="@dimen/dp_17"
+            android:layout_marginBottom="@dimen/dp_6"
             android:layout_toStartOf="@+id/appCompatButton"
             android:text="1" />
 
@@ -90,9 +89,9 @@
             android:layout_marginTop="@dimen/dp_5"
             android:background="@color/white"
             android:fontFamily="sans-serif-black"
-            android:text="-"
+            android:text="@string/bot"
             android:textColor="@color/black"
-            android:textSize="10sp" />
+            android:textSize="@dimen/sp_10" />
     </RelativeLayout>
 
 </RelativeLayout>

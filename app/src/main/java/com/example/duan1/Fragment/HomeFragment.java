@@ -13,19 +13,12 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-import com.example.duan1.Adapter.MenuItemsAdapter;
+
 import com.example.duan1.Adapter.MenuItemsDrinkAdapter;
 import com.example.duan1.Adapter.MenuItemsFoodAdapter;
-import com.example.duan1.Adapter.PopularAdapter;
-import com.example.duan1.Adapter.RecommendedAdapter;
 import com.example.duan1.DetailsDrinkOrFood;
-import com.example.duan1.HomeAdmin;
-import com.example.duan1.LoginActivity;
-import com.example.duan1.MainActivity;
-import com.example.duan1.Model.Popular;
 import com.example.duan1.Model.ProductDrink;
 import com.example.duan1.Model.ProductFood;
-import com.example.duan1.Model.Recommended;
 import com.example.duan1.R;
 import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
@@ -34,12 +27,10 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.ArrayList;
-import java.util.List;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 
 public class HomeFragment extends Fragment {
-    View view;
     RecyclerView recyclerViewDrink, recyclerViewFood;
     CircleImageView image;
     DatabaseReference databaseReference;
@@ -55,7 +46,7 @@ public class HomeFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        view= inflater.inflate(R.layout.fragment_home,container,false);
+        View view = inflater.inflate(R.layout.fragment_home, container, false);
         recyclerViewDrink = view.findViewById(R.id.recycler_drink);
         recyclerViewFood = view.findViewById(R.id.recycler_food);
 
@@ -65,11 +56,10 @@ public class HomeFragment extends Fragment {
         listFood = new ArrayList<>();
 
         databaseReference = FirebaseDatabase.getInstance().getReference();
-        if(list == null && listFood == null){
+        if (list == null && listFood == null) {
             databaseReference.setValue(productDrink);
             databaseReference.setValue(productFood);
-        }
-        else{
+        } else {
             LoadRecyclerDrink();
             LoadReycylerFood();
         }
@@ -83,18 +73,18 @@ public class HomeFragment extends Fragment {
         setContentView(R.layout.fragment_home);
     }
 
-    public void LoadRecyclerDrink(){
+    public void LoadRecyclerDrink() {
         databaseReference.child("Drink").addChildEventListener(new ChildEventListener() {
             @Override
             public void onChildAdded(@NonNull DataSnapshot snapshot, @Nullable String previousChildName) {
                 productDrink = snapshot.getValue(ProductDrink.class);
                 list.add(productDrink);
                 recyclerViewDrink.setLayoutManager(new LinearLayoutManager(getContext()));
-                MenuItemsDrinkAdapter menuItemsDrinkAdapter = new MenuItemsDrinkAdapter(list, getContext(),HomeFragment.this);
+                MenuItemsDrinkAdapter menuItemsDrinkAdapter = new MenuItemsDrinkAdapter(list, getContext(), HomeFragment.this);
                 recyclerViewDrink.setHasFixedSize(true);
                 recyclerViewDrink.setAdapter(menuItemsDrinkAdapter);
                 menuItemsDrinkAdapter.notifyDataSetChanged();
-                Toast.makeText(getContext(), ""+list.size(), Toast.LENGTH_SHORT).show();
+                Toast.makeText(getContext(), "" + list.size(), Toast.LENGTH_SHORT).show();
             }
 
             @Override
@@ -118,18 +108,21 @@ public class HomeFragment extends Fragment {
             }
         });
     }
-    public void LoadReycylerFood(){
+
+    public void LoadReycylerFood() {
         databaseReference.child("Food").addChildEventListener(new ChildEventListener() {
             @Override
             public void onChildAdded(@NonNull DataSnapshot snapshot, @Nullable String previousChildName) {
                 productFood = snapshot.getValue(ProductFood.class);
                 listFood.add(productFood);
                 recyclerViewFood.setLayoutManager(new LinearLayoutManager(getContext()));
-                MenuItemsFoodAdapter menuItemsFoodAdapter = new MenuItemsFoodAdapter(listFood, getContext(),HomeFragment.this);
+
+                MenuItemsFoodAdapter menuItemsFoodAdapter = new MenuItemsFoodAdapter(listFood, getContext(), HomeFragment.this);
+
                 recyclerViewFood.setHasFixedSize(true);
                 recyclerViewFood.setAdapter(menuItemsFoodAdapter);
                 menuItemsFoodAdapter.notifyDataSetChanged();
-                Toast.makeText(getContext(), ""+listFood.size(), Toast.LENGTH_SHORT).show();
+                Toast.makeText(getContext(), "" + listFood.size(), Toast.LENGTH_SHORT).show();
             }
 
             @Override
@@ -153,8 +146,19 @@ public class HomeFragment extends Fragment {
             }
         });
     }
-    public void Itent(int position){
+
+    public void Intent(int position, boolean isFood) {
+
         Intent i = new Intent(getContext(), DetailsDrinkOrFood.class);
+        if (isFood) {
+            ProductFood food = listFood.get(position);
+            i.putExtra("KEY_VALUE", food);
+            i.putExtra("Food", true);
+        } else {
+            ProductDrink drink = list.get(position);
+            i.putExtra("KEY_VALUE", drink);
+            i.putExtra("Food", false);
+        }
         startActivity(i);
     }
 }

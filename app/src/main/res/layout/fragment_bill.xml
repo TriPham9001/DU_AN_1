@@ -1,13 +1,347 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#A0CCEF">
+    android:background="@color/white">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <RelativeLayout
+        android:id="@+id/topBill"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Bill Fragment"
-        android:textSize="30sp"
-        android:layout_centerInParent="true"/>
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/nav_oder_top">
+
+        <ImageView
+            android:id="@+id/img_back_oder"
+            android:layout_width="@dimen/dp_50"
+            android:layout_height="@dimen/dp_50"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_margin="@dimen/dp_10"
+            android:src="@drawable/ic_back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="88dp"
+            android:layout_marginTop="14dp"
+            android:layout_marginEnd="@dimen/dp_10"
+            android:layout_marginBottom="@dimen/dp_10"
+            android:layout_toEndOf="@+id/img_back_oder"
+            android:text="@string/hoa_don"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp_30" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/bodyBill"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/topBill">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/thongTin"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/nav_oder_top">
+
+                <TextView
+                    android:id="@+id/edThongTin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="@dimen/dp_30"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:text="Thông Tin Khách Hàng"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp_20" />
+
+                <RelativeLayout
+                    android:id="@+id/idMaHoaDon"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/edThongTin"
+                    android:layout_marginTop="@dimen/dp_20">
+
+                    <TextView
+                        android:id="@+id/edMaHoaDon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginLeft="@dimen/dp_30"
+                        android:layout_marginTop="@dimen/dp_10"
+                        android:layout_marginBottom="@dimen/dp_10"
+                        android:text="@string/ma_bill"
+                        android:textSize="@dimen/sp_15" />
+
+                    <TextView
+                        android:id="@+id/edIDHoaDon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginStart="@dimen/dp_100"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="@dimen/dp_10"
+                        android:layout_toEndOf="@+id/edMaHoaDon"
+                        android:text="@string/id_Bill"
+                        android:textSize="@dimen/sp_15" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/idMaHoaDon">
+
+                    <TextView
+                        android:id="@+id/edTenKhachHang"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginLeft="@dimen/dp_30"
+                        android:layout_marginTop="@dimen/dp_10"
+                        android:layout_marginBottom="@dimen/dp_10"
+                        android:text="@string/ten_khach_hang"
+                        android:textSize="@dimen/sp_15" />
+
+                    <TextView
+                        android:id="@+id/namePerson"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginStart="@dimen/dp_80"
+                        android:layout_marginTop="@dimen/dp_10"
+                        android:layout_marginRight="@dimen/dp_100"
+                        android:layout_marginBottom="@dimen/dp_10"
+                        android:layout_toEndOf="@+id/edTenKhachHang"
+                        android:fontFamily="sans-serif-black"
+                        android:text="@string/name_person"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/sp_15" />
+
+                </RelativeLayout>
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/allPrince"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/thongTin">
+
+                <TextView
+                    android:id="@+id/edThongTinPhi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="@dimen/dp_30"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:text="@string/thong_tin_phi"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp_20" />
+
+                <RelativeLayout
+                    android:id="@+id/NoiDung"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/edThongTinPhi"
+                    android:layout_marginTop="@dimen/dp_20">
+
+                    <TextView
+                        android:id="@+id/edNoiDung"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginLeft="@dimen/dp_30"
+                        android:layout_marginTop="@dimen/dp_10"
+                        android:layout_marginBottom="@dimen/dp_10"
+                        android:text="Nội Dung"
+                        android:textSize="@dimen/sp_15" />
+
+                    <TextView
+                        android:id="@+id/nameNoiDung"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginStart="@dimen/dp_100"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="@dimen/dp_10"
+                        android:layout_toEndOf="@+id/edNoiDung"
+                        android:text="@string/name_shop"
+                        android:textSize="@dimen/sp_15" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+
+                    android:id="@+id/ngayThangNam"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/NoiDung">
+
+                    <TextView
+                        android:id="@+id/nameDate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginLeft="@dimen/dp_30"
+                        android:layout_marginTop="@dimen/dp_10"
+                        android:layout_marginBottom="@dimen/dp_10"
+                        android:text="Ngày-Tháng-Năm"
+                        android:textSize="@dimen/sp_15" />
+
+                    <TextView
+                        android:id="@+id/Date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginStart="@dimen/dp_100"
+                        android:layout_marginTop="@dimen/dp_10"
+                        android:layout_marginRight="@dimen/dp_100"
+                        android:layout_marginBottom="@dimen/dp_10"
+                        android:layout_toEndOf="@+id/nameDate"
+                        android:text="21-11-2020"
+                        android:textSize="@dimen/sp_15" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+
+                    android:id="@+id/tienmonan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/ngayThangNam">
+
+                    <TextView
+                        android:id="@+id/namePrince"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginLeft="@dimen/dp_30"
+                        android:layout_marginTop="@dimen/dp_10"
+                        android:layout_marginBottom="@dimen/dp_10"
+                        android:text="@string/prince_food"
+                        android:textSize="@dimen/sp_15" />
+
+                    <TextView
+                        android:id="@+id/princeFood"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginStart="@dimen/dp_100"
+                        android:layout_marginTop="@dimen/dp_10"
+                        android:layout_marginRight="@dimen/dp_100"
+                        android:layout_marginBottom="@dimen/dp_10"
+                        android:layout_toEndOf="@+id/namePrince"
+                        android:text="20.000đ"
+                        android:textSize="@dimen/sp_15" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tienmonan">
+
+                    <TextView
+                        android:id="@+id/edTienMonAn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginLeft="@dimen/dp_30"
+                        android:layout_marginTop="@dimen/dp_10"
+                        android:layout_marginBottom="@dimen/dp_10"
+                        android:text="@string/tien_mon_an"
+                        android:textSize="@dimen/sp_15" />
+
+                    <TextView
+                        android:id="@+id/PrinceMonAn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginStart="@dimen/dp_100"
+                        android:layout_marginTop="@dimen/dp_10"
+                        android:layout_marginRight="@dimen/dp_100"
+                        android:layout_marginBottom="@dimen/dp_10"
+                        android:layout_toEndOf="@+id/edTienMonAn"
+                        android:text="20.000đ"
+                        android:textSize="@dimen/sp_15" />
+
+                </RelativeLayout>
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/thanhtoan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/allPrince"
+                android:background="@drawable/nav_oder_bottom">
+
+                <TextView
+                    android:id="@+id/edThanhToan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="@dimen/dp_30"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:text="@string/so_tien_thanh_toan"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp_20" />
+
+                <TextView
+                    android:id="@+id/edTienThanhToan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:layout_marginRight="@dimen/dp_30"
+                    android:text="20.000đ"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp_20" />
+
+
+            </RelativeLayout>
+        </RelativeLayout>
+
+
+    </ScrollView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_100"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="@dimen/dp_300"
+            android:layout_height="@dimen/dp_50"
+            android:layout_centerInParent="true"
+            android:background="@drawable/button_background"
+            android:fontFamily="sans-serif-black"
+            android:text="@string/thanh_toan"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp_20" />
+    </RelativeLayout>
+
 </RelativeLayout>

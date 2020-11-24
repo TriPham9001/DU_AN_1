@@ -1,7 +1,6 @@
 package com.example.duan1.Adapter;
 
 import android.content.Context;
-import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,10 +11,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
-import com.example.duan1.DetailsDrinkOrFood;
 import com.example.duan1.Fragment.HomeFragment;
-import com.example.duan1.MainActivity;
-import com.example.duan1.Model.ProductDrink;
 import com.example.duan1.Model.ProductFood;
 import com.example.duan1.R;
 
@@ -51,7 +47,7 @@ public class MenuItemsFoodAdapter extends RecyclerView.Adapter<MenuItemsFoodAdap
             holder.itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    homeFragment.Itent(position);
+                    homeFragment.Intent(position, true);
                 }
             });
         }

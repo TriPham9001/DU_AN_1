@@ -1,9 +1,6 @@
 package com.example.duan1.Adapter;
 
 import android.content.Context;
-import android.content.Intent;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,17 +11,11 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
-import com.example.duan1.DetailsDrinkOrFood;
 import com.example.duan1.Fragment.HomeFragment;
-import com.example.duan1.MainActivity;
 import com.example.duan1.Model.ProductDrink;
 import com.example.duan1.R;
-import com.firebase.ui.database.FirebaseRecyclerAdapter;
-import com.squareup.picasso.Picasso;
 
 import java.util.List;
-
-import de.hdodenhof.circleimageview.CircleImageView;
 
 public class MenuItemsDrinkAdapter extends RecyclerView.Adapter<MenuItemsDrinkAdapter.MenuItemsViewHolder> {
 
@@ -56,7 +47,7 @@ public class MenuItemsDrinkAdapter extends RecyclerView.Adapter<MenuItemsDrinkAd
             holder.itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    homeFragment.Itent(position);
+                    homeFragment.Intent(position, false);
                 }
             });
 

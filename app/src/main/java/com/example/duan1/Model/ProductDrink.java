@@ -1,8 +1,8 @@
 package com.example.duan1.Model;
 
-import android.graphics.drawable.Drawable;
+import java.io.Serializable;
 
-public class ProductDrink {
+public class ProductDrink implements Serializable {
 
     private String nameDrink;
     private String codeDrink;

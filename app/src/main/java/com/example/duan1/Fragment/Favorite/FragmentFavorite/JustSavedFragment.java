@@ -1,4 +1,4 @@
-package com.example.duan1.Fragment;
+package com.example.duan1.Fragment.Favorite.FragmentFavorite;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -11,12 +11,11 @@ import androidx.fragment.app.Fragment;
 
 import com.example.duan1.R;
 
-public class FavoriteFragment extends Fragment {
-
-
+public class JustSavedFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_favorite,container,false);
+        View view = inflater.inflate(R.layout.favorite_fragment_just_saved, container, false);
+        return view;
     }
 }

@@ -1,23 +1,20 @@
 package com.example.duan1;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
-import com.example.duan1.Adapter.MenuItemsFoodAdapter;
 import com.example.duan1.Fragment.BillFragment;
-import com.example.duan1.Fragment.FavoriteFragment;
+import com.example.duan1.Fragment.Favorite.FavoriteFragment;
 import com.example.duan1.Fragment.HomeFragment;
 import com.example.duan1.Fragment.PersonFragment;
 import com.example.duan1.Fragment.ShopFragment;
-import com.example.duan1.Model.ProductDrink;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
 
 public class MainActivity extends AppCompatActivity {
     DatabaseReference mDatabase;
