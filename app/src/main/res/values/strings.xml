@@ -52,7 +52,7 @@
     <string name="sale">Giảm Giá</string>
     <string name="tong_thanh_toan">Tổng Thanh Toán</string>
     <string name="add_food">Thêm món</string>
-    <string name="new_saved">Mới Lưu</string>
+    <string name="favorite_just_save">Yêu Thích</string>
     <string name="recently">Gần Đây</string>
     <string name="enter_the_email">Enter The Email</string>
     <string name="enter_the_password">Enter The Password</string>
@@ -64,7 +64,7 @@
     <string name="signi_up">SignI-UP</string>
     <string name="sign_in_with">Sign In With :</string>
     <string name="don_hang_cua_ban">Đơn hàng của bạn</string>
-    <string name="prince">150.000</string>
+    <string name="prince">150.000đ</string>
     <string name="prince_ship">14.000</string>
     <string name="prince_nen_tang">1.000</string>
     <string name="prince_sale">-15.000</string>
@@ -80,4 +80,48 @@
     <string name="king_food_main">King Food</string>
     <string name="them">+</string>
     <string name="bot">-</string>
+    <string name="fravorite_food">MÓN ĂN ƯA THÍCH</string>
+    <string name="dich_vu">Dịch Vụ</string>
+    <string name="login_or_sign_up">Đăng Nhập / Đăng Kí</string>
+    <string name="voucher">Ví Voucher</string>
+    <string name="address">Địa Chỉ</string>
+    <string name="invite">Mời Bạn Bè</string>
+    <string name="help_center">Trung Tâm Trợ Giúp</string>
+    <string name="setting">Cài Đặt</string>
+    <string name="return_home">Về Trang Chủ</string>
+    <string name="version">Phiên Bản 1.1.0.0</string>
+    <string name="date">21-11-2020</string>
+    <string name="price_bill">20.000đ</string>
+    <string name="shopping">Shopping</string>
+    <string name="bill">Bill</string>
+    <string name="home">Home</string>
+    <string name="favorite">Favorite</string>
+    <string name="person">Person</string>
+    <string name="revenue">Revenue</string>
+    <string name="ty_trong_mat_hang">Tỷ Trọng Mặt Hàng</string>
+    <string name="carried_away">Mang Đi</string>
+    <string name="dish_together">Món Ăn Kèm</string>
+    <string name="food">Món Ăn</string>
+    <string name="drink">Thức Uống</string>
+    <string name="d">Món Ăn</string>
+    <string name="sales_report">Báo Cáo Doanh Thu</string>
+    <string name="da_thanh_toan">Đã thanh toán</string>
+    <string name="so">19</string>
+    <string name="cham_muc_ben_duoi">Chạm mục bên dưới để xem chi tiết</string>
+    <string name="so_tien_ban_hang_da_thu">Số tiền bán hàng đã thu</string>
+    <string name="dang_phuc_vu">Đang phục vụ</string>
+    <string name="hoa_don_huy">Hoá đơn huỷ</string>
+    <string name="nhan_vien_oder_sai">Số hóa đơn hủy bởi nhân viên order sai</string>
+    <string name="hoa_don_giam_gia">Số hóa đơn giảm giá</string>
+    <string name="so_tien_phu_thu">Số tiền thu từ phụ thu</string>
+    <string name="so_hoa_don_giam_gia">Hoá đơn giảm giá</string>
+    <string name="hoa_don_phu_thu">Hoá đơn ph thu</string>
+    <string name="humber">Humber</string>
+    <string name="effective">Có Hiệu Lực</string>
+    <string name="used">Đã Sử Dụng</string>
+    <string name="expired">Hết Hiệu Lực</string>
+    <string name="sale_voucher">Mã Giảm 20k Trên Gia Món</string>
+    <string name="limited_offer">Ưu Đãi Có Giới Hạn</string>
+
+
 </resources>

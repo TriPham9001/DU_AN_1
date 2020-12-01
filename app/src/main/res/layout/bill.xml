@@ -13,7 +13,7 @@
         android:background="@drawable/nav_oder_top">
 
         <ImageView
-            android:id="@+id/img_back_oder"
+            android:id="@+id/img_back_bill"
             android:layout_width="@dimen/dp_50"
             android:layout_height="@dimen/dp_50"
             android:layout_alignParentLeft="true"
@@ -29,7 +29,7 @@
             android:layout_marginTop="14dp"
             android:layout_marginEnd="@dimen/dp_10"
             android:layout_marginBottom="@dimen/dp_10"
-            android:layout_toEndOf="@+id/img_back_oder"
+            android:layout_toEndOf="@+id/img_back_bill"
             android:text="@string/hoa_don"
             android:textColor="@color/black"
             android:textSize="@dimen/sp_30" />
@@ -38,7 +38,8 @@
     <ScrollView
         android:id="@+id/bodyBill"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/Pay"
         android:layout_below="@+id/topBill">
 
         <RelativeLayout
@@ -176,10 +177,9 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignParentTop="true"
-                        android:layout_marginStart="@dimen/dp_100"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginBottom="@dimen/dp_10"
-                        android:layout_toEndOf="@+id/edNoiDung"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginTop="@dimen/dp_10"
+                        android:layout_marginRight="@dimen/dp_30"
                         android:text="@string/name_shop"
                         android:textSize="@dimen/sp_15" />
 
@@ -209,12 +209,10 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignParentTop="true"
-                        android:layout_marginStart="@dimen/dp_100"
-                        android:layout_marginTop="@dimen/dp_10"
-                        android:layout_marginRight="@dimen/dp_100"
-                        android:layout_marginBottom="@dimen/dp_10"
-                        android:layout_toEndOf="@+id/nameDate"
-                        android:text="21-11-2020"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="@dimen/dp_30"
+                        android:text="@string/date"
                         android:textSize="@dimen/sp_15" />
 
                 </RelativeLayout>
@@ -243,11 +241,9 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignParentTop="true"
-                        android:layout_marginStart="@dimen/dp_100"
+                        android:layout_alignParentRight="true"
                         android:layout_marginTop="@dimen/dp_10"
-                        android:layout_marginRight="@dimen/dp_100"
-                        android:layout_marginBottom="@dimen/dp_10"
-                        android:layout_toEndOf="@+id/namePrince"
+                        android:layout_marginRight="@dimen/dp_30"
                         android:text="20.000đ"
                         android:textSize="@dimen/sp_15" />
 
@@ -276,12 +272,10 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignParentTop="true"
-                        android:layout_marginStart="@dimen/dp_100"
+                        android:layout_alignParentRight="true"
                         android:layout_marginTop="@dimen/dp_10"
-                        android:layout_marginRight="@dimen/dp_100"
-                        android:layout_marginBottom="@dimen/dp_10"
-                        android:layout_toEndOf="@+id/edTienMonAn"
-                        android:text="20.000đ"
+                        android:layout_marginRight="@dimen/dp_30"
+                        android:text="@string/price_bill"
                         android:textSize="@dimen/sp_15" />
 
                 </RelativeLayout>
@@ -316,7 +310,7 @@
                     android:layout_alignParentRight="true"
                     android:layout_marginTop="@dimen/dp_10"
                     android:layout_marginRight="@dimen/dp_30"
-                    android:text="20.000đ"
+                    android:text="@string/price_bill"
                     android:textColor="@color/black"
                     android:textSize="@dimen/sp_20" />
 
@@ -328,6 +322,7 @@
     </ScrollView>
 
     <RelativeLayout
+        android:id="@+id/Pay"
         android:layout_width="match_parent"
         android:layout_height="@dimen/dp_100"
         android:layout_alignParentLeft="true"

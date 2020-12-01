@@ -361,6 +361,7 @@
             android:textSize="@dimen/dp_20" />
 
         <Button
+            android:id="@+id/btnOder"
             android:layout_width="@dimen/dp_300"
             android:layout_height="wrap_content"
             android:layout_gravity="center"

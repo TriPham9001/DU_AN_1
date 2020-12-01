@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_150"
+        android:layout_margin="@dimen/dp_10">
+
+        <RelativeLayout
+            android:id="@+id/left"
+            android:layout_width="@dimen/dp_150"
+            android:layout_height="@dimen/dp_150"
+            android:background="@drawable/bg_voucher">
+
+            <ImageView
+                android:id="@+id/voucher"
+                android:layout_width="@dimen/dp_50"
+                android:layout_height="@dimen/dp_50"
+                android:layout_centerInParent="true"
+                android:src="@drawable/ic_voucher" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/voucher"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="@dimen/dp_5"
+                android:text="Quán Đối Tác"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_20" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_150"
+            android:layout_toEndOf="@+id/left"
+            android:background="@drawable/bg_sale">
+
+            <TextView
+                android:id="@+id/sale"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/sp_20"
+                android:fontFamily="sans-serif-black"
+                android:text="@string/sale_voucher"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_15" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/sale"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/sp_20"
+                android:layout_marginTop="@dimen/dp_10"
+                android:background="@drawable/bg_limitit"
+                android:text="@string/limited_offer"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_15" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+</RelativeLayout>

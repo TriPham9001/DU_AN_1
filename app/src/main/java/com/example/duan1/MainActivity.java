@@ -8,10 +8,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
-import com.example.duan1.Fragment.BillFragment;
 import com.example.duan1.Fragment.Favorite.FavoriteFragment;
 import com.example.duan1.Fragment.HomeFragment;
-import com.example.duan1.Fragment.PersonFragment;
+import com.example.duan1.Fragment.Person.PersonFragment;
+import com.example.duan1.Fragment.RevenueFragment;
 import com.example.duan1.Fragment.ShopFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.firebase.database.DatabaseReference;
@@ -48,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
                            selectedFragment = new ShopFragment();
                            break;
                        case R.id.nav_bill:
-                           selectedFragment = new BillFragment();
+                           selectedFragment = new RevenueFragment();
                            break;
                        case R.id.nav_favorite:
                            selectedFragment = new FavoriteFragment();

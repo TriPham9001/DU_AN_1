@@ -4,42 +4,39 @@
     android:layout_height="match_parent"
     android:background="@color/white">
 
+    <ImageView
+        android:id="@+id/backVoucher"
+        android:layout_width="@dimen/dp_50"
+        android:layout_height="@dimen/dp_50"
+        android:src="@drawable/ic_back" />
+
     <TextView
-        android:id="@+id/txtFavoriteFood"
+        android:id="@+id/txtVoucher"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
+        android:layout_height="@dimen/dp_50"
         android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/backVoucher"
         android:fontFamily="sans-serif-black"
         android:gravity="top|center"
-        android:text="@string/fravorite_food"
+        android:text="@string/voucher"
         android:textColor="@color/black"
-        android:textSize="@dimen/sp_30" />
+        android:textSize="@dimen/sp_40" />
 
-    <TextView
-        android:id="@+id/txtDV"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/txtFavoriteFood"
-        android:layout_margin="@dimen/dp_20"
-        android:text="@string/dich_vu"
-        android:textColor="@color/black"
-        android:textSize="@dimen/sp_20" />
 
     <com.google.android.material.tabs.TabLayout
-        android:id="@+id/tab_layout"
+        android:id="@+id/tabLayoutPerson"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/txtDV"
+        android:layout_below="@+id/txtVoucher"
         android:background="@color/white"
         android:elevation="6dp"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
 
     <androidx.viewpager.widget.ViewPager
-        android:id="@+id/pager"
+        android:id="@+id/pagePerson"
         android:layout_width="match_parent"
         android:layout_height="fill_parent"
-        android:layout_below="@id/tab_layout" />
+        android:layout_below="@id/tabLayoutPerson" />
 
 
 </RelativeLayout>

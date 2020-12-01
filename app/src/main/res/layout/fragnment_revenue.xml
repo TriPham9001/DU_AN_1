@@ -1,0 +1,355 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/top_revenue"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_70"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_5"
+                android:fontFamily="sans-serif-black"
+                android:text="@string/sales_report"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_30" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/body_revenue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/top_revenue"
+            android:layout_marginTop="@dimen/dp_10">
+
+            <ImageView
+                android:id="@+id/imgOder"
+                android:layout_width="@dimen/dp_30"
+                android:layout_height="@dimen/dp_30"
+                android:layout_margin="@dimen/dp_10"
+                android:src="@drawable/ic_oder" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="@dimen/dp_5"
+                android:layout_marginTop="4dp"
+                android:layout_toEndOf="@+id/imgOder"
+                android:fontFamily="sans-serif-black"
+                android:text="@string/oder"
+                android:textColor="@color/main_color"
+                android:textSize="@dimen/sp_30" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="16dp"
+                android:layout_marginRight="11dp"
+                android:fontFamily="sans-serif-black"
+                android:text="@string/cham_muc_ben_duoi"
+                android:textColor="@color/main_color"
+                android:textSize="@dimen/dp_15" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/daThanhToan"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_50"
+            android:layout_below="@+id/body_revenue"
+            android:layout_marginTop="@dimen/dp_10"
+            android:background="@drawable/bg_revenue">
+
+            <TextView
+                android:id="@+id/soDaThanhToan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_margin="@dimen/dp_10"
+                android:text="@string/so"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_15" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/dp_30"
+                android:layout_marginTop="@dimen/dp_10"
+                android:text="@string/da_thanh_toan"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_15" />
+
+            <TextView
+                android:layout_width="@dimen/dp_150"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_10"
+                android:layout_marginRight="@dimen/dp_20"
+                android:layout_toStartOf="@+id/princeDaThanhToan"
+                android:text="@string/so_tien_ban_hang_da_thu"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_15" />
+
+            <TextView
+                android:id="@+id/princeDaThanhToan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/dp_20"
+                android:text="920.000đ"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_15" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/dangPhucVu"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_50"
+            android:layout_below="@+id/daThanhToan"
+            android:layout_marginTop="@dimen/dp_10"
+            android:background="@drawable/bg_revenue">
+
+            <TextView
+                android:id="@+id/soDangPhucVu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_margin="@dimen/dp_10"
+                android:text="@string/so"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_15" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/dp_30"
+                android:layout_marginTop="@dimen/dp_10"
+                android:text="@string/dang_phuc_vu"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_15" />
+
+            <TextView
+                android:layout_width="@dimen/dp_150"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_10"
+                android:layout_marginRight="@dimen/dp_20"
+                android:layout_toStartOf="@+id/princeDangPhucVu"
+                android:text="Số tiền bán hàng từ bàn đang phục vụ"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_15" />
+
+            <TextView
+                android:id="@+id/princeDangPhucVu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/dp_20"
+                android:text="920.000đ"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_15" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/hoaDonDaHuy"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_50"
+            android:layout_below="@+id/dangPhucVu"
+            android:layout_marginTop="@dimen/dp_10"
+
+            android:background="@drawable/bg_revenue">
+
+            <TextView
+                android:id="@+id/soHoaDonDaHuy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_margin="@dimen/dp_10"
+                android:text="@string/so"
+                android:textColor="@color/red"
+                android:textSize="@dimen/sp_15" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/dp_30"
+                android:layout_marginTop="@dimen/dp_10"
+                android:text="@string/hoa_don_huy"
+                android:textColor="@color/red"
+                android:textSize="@dimen/sp_15" />
+
+            <TextView
+                android:layout_width="@dimen/dp_150"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_10"
+                android:layout_marginRight="@dimen/dp_20"
+                android:layout_toStartOf="@+id/princeHoaDonDaHuy"
+                android:text="@string/nhan_vien_oder_sai"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_15" />
+
+            <TextView
+                android:id="@+id/princeHoaDonDaHuy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/dp_20"
+                android:text="920.000đ"
+                android:textColor="@color/red"
+                android:textSize="@dimen/sp_15" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/hoaDonGiamGia"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_50"
+            android:layout_below="@+id/hoaDonDaHuy"
+            android:layout_marginTop="@dimen/dp_10"
+            android:background="@drawable/bg_revenue">
+
+            <TextView
+                android:id="@+id/soHoaDonGiamGia"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_margin="@dimen/dp_10"
+                android:text="@string/so"
+                android:textColor="@color/red"
+                android:textSize="@dimen/sp_15" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/dp_30"
+                android:layout_marginTop="@dimen/dp_10"
+                android:text="@string/so_hoa_don_giam_gia"
+                android:textColor="@color/red"
+                android:textSize="@dimen/sp_15" />
+
+            <TextView
+                android:layout_width="@dimen/dp_150"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_10"
+                android:layout_marginRight="@dimen/dp_20"
+                android:layout_toStartOf="@+id/princeHoaDonGiamGia"
+                android:text="@string/hoa_don_giam_gia"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_15" />
+
+            <TextView
+                android:id="@+id/princeHoaDonGiamGia"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/dp_20"
+                android:text="920.000đ"
+                android:textColor="@color/red"
+                android:textSize="@dimen/sp_15" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/hoaDonPhuThu"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_50"
+            android:layout_below="@+id/hoaDonGiamGia"
+            android:layout_marginTop="@dimen/dp_10"
+            android:background="@drawable/bg_revenue">
+
+            <TextView
+                android:id="@+id/soHoaDonPhuThu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_margin="@dimen/dp_10"
+                android:text="@string/so"
+                android:textColor="@color/red"
+                android:textSize="@dimen/sp_15" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/dp_30"
+                android:layout_marginTop="@dimen/dp_10"
+                android:text="@string/hoa_don_phu_thu"
+                android:textColor="@color/red"
+                android:textSize="@dimen/sp_15" />
+
+            <TextView
+                android:layout_width="@dimen/dp_150"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_10"
+                android:layout_marginRight="@dimen/dp_20"
+                android:layout_toStartOf="@+id/princeHoaDonPhuThu"
+                android:text="@string/so_tien_phu_thu"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_15" />
+
+            <TextView
+                android:id="@+id/princeHoaDonPhuThu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/dp_20"
+                android:text="920.000đ"
+                android:textColor="@color/red"
+                android:textSize="@dimen/sp_15" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_300"
+            android:layout_below="@+id/hoaDonPhuThu"
+            android:layout_marginTop="@dimen/dp_20">
+
+            <TextView
+                android:id="@+id/txtTiTrong"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:text="@string/ty_trong_mat_hang"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_20" />
+
+            <com.razerdp.widget.animatedpieview.AnimatedPieView
+                android:id="@+id/pieChart"
+                android:layout_width="@dimen/dp_300"
+                android:layout_height="@dimen/dp_300"
+                android:layout_below="@id/txtTiTrong"
+                android:layout_centerHorizontal="true" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</ScrollView>
